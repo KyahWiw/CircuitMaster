@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tournament Organizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">Tournament Organizer</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="hubs.html">HUBS</a></li>
+          <li><a href="logout.html">LOG OUT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h1>Manage Your Tournament</h1>
+
+      <div id="tournamentSetup" class="admin-panel">
+        <h2>Create/Edit Tournament</h2>
+        <input
+          type="text"
+          id="tournamentName"
+          placeholder="Tournament Name"
+          required
+        />
+        <input
+          type="text"
+          id="discipline"
+          placeholder="Discipline (Game)"
+          required
+        />
+        <input type="text" id="platform" placeholder="Platform" required />
+        <input
+          type="text"
+          id="type"
+          placeholder="Type (Individual/Team)"
+          required
+        />
+        <input
+          type="number"
+          id="size"
+          placeholder="Team/Player Size"
+          required
+        />
+        <button id="createTournament">Save Tournament</button>
+      </div>
+
+      <div id="tournamentInfo" class="tournament-info">
+        <h2>Current Tournaments</h2>
+        <div id="tournamentDetails"></div>
+      </div>
+    </div>
+
+    <script src="/Admin/Javascript/admin-script.js"></script>
+  </body>
+</html>
