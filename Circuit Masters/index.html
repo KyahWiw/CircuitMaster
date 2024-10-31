@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Circuit Masters</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="logo">Circuit Masters</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#hubs">Hubs</a></li>
+                <li><a href="Log In/login-index.html">Login</a></li>
+                <li><input type="text" id="search" placeholder="Search..." /></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Live Scoreboard Section -->
+    <section id="scoreboard-live">
+        <h6>Intrams 2024</h6>
+        <div class="scoreboard-container">
+            <!-- Scorecard with integrated label -->
+            <div class="scorecard">
+                <!-- Main content of the scorecard -->
+                <div class="scorecard-content">
+                    <!-- Label at the top of the scorecard -->
+                    <div class="scorecard-label">Match 1</div>
+
+                    <div class="match-summary">
+                        <div class="team">
+                            <img src="/Assets/Image/Logo/cite.png" alt="Team 1 Logo" class="team-logo" />
+                            <span class="team-name">CITE</span>
+                            <span class="team-score">3</span>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="final-label">FINAL</div>
+                        <div class="team">
+                            <img src="/Assets/Image/Logo/nursing.png" alt="Team 2 Logo" class="team-logo" />
+                            <span class="team-name">CON</span>
+                            <span class="team-score">2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hover details section -->
+                <div class="match-details">
+                    <p>Location: MOA Arena</p>
+                    <p>Date: 10/30/24</p>
+                    <p>Time: 08:00 AM</p>
+                    <!-- Favorite button -->
+                    <button class="favorite-btn">Add to Favorites</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Circuit Masters</h1>
+        <p>
+            Your ultimate platform for organizing tournaments and tracking scores.
+        </p>
+        <a href="hubs.html" class="button">Explore Hubs</a>
+    </section>
+
+    <!-- Scoreboard Display Section -->
+    <section class="scoreboard">
+        <div class="scoreboard-header">
+            <div class="team">
+                <img id="view-team1-logo" src="team1-logo.png" alt="Team 1 Logo" />
+                <span id="view-team1-name">University of the East</span>
+            </div>
+            <div class="score">
+                <span id="view-team1-score" class="team-score">80</span>
+                <span class="separator">:</span>
+                <span id="view-team2-score" class="team-score">78</span>
+            </div>
+            <div class="team">
+                <img id="view-team2-logo" src="team2-logo.png" alt="Team 2 Logo" />
+                <span id="view-team2-name">University of Santo Tomas</span>
+            </div>
+        </div>
+        <div class="scoreboard-details" id="view-scoreboard-details">
+            <span id="view-period">Period 4</span>
+            <span id="view-time">00:00</span>
+            <span id="view-competition">Competition: UAAP Season 87 - Junior's</span
+        >
+        <span id="view-venue">Venue: MOA</span>
+            <span id="view-game-details">Game Details: 10/30/24 08:00 AM</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content">
+        <h2>About Us</h2>
+        <p>
+            Circuit Masters is a tournament organization platform that enables organizers to manage and players to compete seamlessly.
+        </p>
+    </section>
+
+    <!-- Hubs Section -->
+    <section id="hubs" class="content">
+        <h2>Our Hubs</h2>
+        <p>
+            Explore various tournament hubs for different games and disciplines.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Circuit Masters. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

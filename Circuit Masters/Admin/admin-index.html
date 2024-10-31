@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizer Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="organizer.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">Tournament Organizer</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hubs.html">Hubs</a></li>
+          <li><a href="/index.html">Sign out</a></li>
+          <li>
+            <a href="search.html"
+              ><img src="search-icon.png" alt="Search" class="search-icon"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <h2>Organizer Dashboard</h2>
+
+      <!-- Scoreboard Edit Form -->
+      <form id="scoreboardForm">
+        <h3>Edit Scoreboard</h3>
+        <label>
+          Team 1 Name:
+          <input type="text" id="team1Name" placeholder="Enter team 1 name" />
+        </label>
+        <label>
+          Team 1 Score:
+          <input
+            type="number"
+            id="team1Score"
+            placeholder="Enter team 1 score"
+          />
+        </label>
+        <label>
+          Team 2 Name:
+          <input type="text" id="team2Name" placeholder="Enter team 2 name" />
+        </label>
+        <label>
+          Team 2 Score:
+          <input
+            type="number"
+            id="team2Score"
+            placeholder="Enter team 2 score"
+          />
+        </label>
+        <label>
+          Schedule Time:
+          <input
+            type="text"
+            id="scheduleTime"
+            placeholder="Enter schedule time"
+          />
+        </label>
+        <label>
+          Notes:
+          <input type="text" id="notes" placeholder="Enter notes" />
+        </label>
+        <button type="submit">Save Changes</button>
+      </form>
+    </main>
+  </body>
+</html>
