@@ -46,31 +46,36 @@ function updateScoreList() {
 // Call loadData on page load
 window.onload = loadData;
 
-function toggleFavorite(button) {
-  const isFavorite = button.classList.toggle("active");
+// JavaScript for scorecard interactivity
 
-  // Update button text
-  button.textContent = isFavorite
-    ? "Remove from Favorites"
-    : "Add to Favorites";
+document.addEventListener("DOMContentLoaded", () => {
+  const favoriteButtons = document.querySelectorAll(".favorite-btn");
 
-  // Show notification
-  showNotification(
-    isFavorite ? "Added to Favorites!" : "Removed from Favorites!"
-  );
-}
+  favoriteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      if (button.classList.contains("active")) {
+        showNotification("Added to favorites!");
+        button.textContent = "Unfavorite";
+      } else {
+        showNotification("Removed from favorites");
+        button.textContent = "Favorite";
+      }
+    });
+  });
 
-function showNotification(message) {
-  const notification = document.getElementById("notification");
-  notification.textContent = message;
-  notification.style.display = "block";
-  notification.style.opacity = "1";
+  // Function to show notifications
+  function showNotification(message) {
+    const notification = document.getElementById("notification");
+    notification.textContent = message;
+    notification.style.display = "block";
+    notification.style.opacity = "1";
 
-  // Hide the notification after 2 seconds
-  setTimeout(() => {
-    notification.style.opacity = "0";
     setTimeout(() => {
-      notification.style.display = "none";
-    }, 500);
-  }, 2000);
-}
+      notification.style.opacity = "0";
+      setTimeout(() => {
+        notification.style.display = "none";
+      }, 500);
+    }, 3000);
+  }
+});
