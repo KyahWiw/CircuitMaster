@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Circuit Masters</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -24,123 +25,195 @@
     </header>
 
     <!-- Live Scoreboard Section -->
-    <section id="scoreboard-live">
-        <h6>Intrams 2024</h6>
-        <div class="scoreboard-container">
-            <!-- Scorecard with integrated label -->
-            <div class="scorecard">
-                <div class="scorecard-content">
-                    <div class="scorecard-label">Match 1</div>
-                    <div class="match-summary">
+    <section id="scorecard" class="scorecard">
+        <span class="title">AU-JAS: INTRAMURALS 2024</span>
+        <div class="vl"></div>
+        <img src="Assets/Image/esport-icon.png" class="sports-icon">
+        <span class="sports">eSports - MLBB</span>
+        <br>
+        <span><b> Latest Schedule </b></span>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Scorecard Slide 1 -->
+                <div class="swiper-slide scorecard-slide">
+                    <div class="match-info">
+                        <span class="stage">Round Robin</span>
+                        <br>
+                        <span class="round">Group A - Match #1</span>
+                        <br>
+                        <span class="date">FINAL</span>
+                    </div>
+                    <div class="teams">
                         <div class="team">
-                            <img src="Assets/Image/Logo/cite.png" alt="Team 1 Logo" class="team-logo" />
-                            <span class="team-name"><b>CITE</b></span>
-                            <span class="team-score"><b>3</b></span>
+                            <img src="Assets/Image/Logo/cite.png" alt="FCAP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">0-1</span>
                         </div>
-                        <div class="vs-section">
-                            <span class="vs-text">VS</span>
-                            <span class="final-label">FINAL</span>
+                        <div class="score">
+                            <span>1 : <b>3</b></span>
                         </div>
                         <div class="team">
-                            <img src="Assets/Image/Logo/nursing.png" alt="Team 2 Logo" class="team-logo" />
-                            <span class="team-name">CON</span>
-                            <span class="team-score">2</span>
+                            <img src="Assets/Image/Logo/nursing.png" alt="FNOP Logo">
+                            <span><b>CON</b></span>
+                            <span class="team-record">1-0</span>
+                            <hr class="winner">
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="scorecard">
-                <div class="scorecard-content">
-                    <div class="scorecard-label">Match 2</div>
-                    <div class="match-summary">
-                        <div class="team">
-                            <img src="Assets/Image/Logo/shtm.png" alt="Team 1 Logo" class="team-logo" />
-                            <span class="team-name">SHTM</span>
-                            <span class="team-score"></span>
-                        </div>
-                        <div class="vs-section">
-                            <span class="vs-text">VS</span>
-                            <span class="final-label">2:30PM</span>
-                        </div>
-                        <div class="team">
-                            <img src="Assets/Image/Logo/cite.png" alt="Team 2 Logo" class="team-logo" />
-                            <span class="team-name">CITE</span>
-                            <span class="team-score"></span>
-                        </div>
+                    <!-- Hover Menu -->
+                    <div class="hover-menu">
+                        <button class="menu-item">Match Details</button>
+                        <button class="menu-item favorite-btn" onclick="toggleFavorite(this)">
+                <span class="star">★</span> Add to Favorites
+              </button>
                     </div>
                 </div>
-            </div>
 
-            <div class="scorecard">
-                <div class="scorecard-content">
-                    <div class="scorecard-label">Match 3</div>
-                    <div class="match-summary">
+                <!-- Scorecard Slide 2 -->
+                <div class="swiper-slide scorecard-slide">
+                    <div class="match-info">
+                        <span class="stage">Round Robin</span>
+                        <br>
+                        <span class="round">Group A - Match #2</span>
+                        <br>
+                        <span class="date">PLAYING</span>
+                    </div>
+                    <div class="teams">
                         <div class="team">
-                            <img src="Assets/Image/Logo/nursing.png" alt="Team 1 Logo" class="team-logo" />
-                            <span class="team-name">CON</span>
-                            <span class="team-score"></span>
+                            <img src="Assets/Image/Logo/shtm.png" alt="FCAP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">0-0</span>
                         </div>
-                        <div class="vs-section">
-                            <span class="vs-text">VS</span>
-                            <span class="final-label">3:30PM</span>
+                        <div class="score">
+                            <span>0 : 0</span>
                         </div>
                         <div class="team">
-                            <img src="Assets/Image/Logo/shtm.png" alt="Team 2 Logo" class="team-logo" />
-                            <span class="team-name">SHTM</span>
-                            <span class="team-score"></span>
+                            <img src="Assets/Image/Logo/cite.png" alt="FNOP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">0-1</span>
                         </div>
                     </div>
+                    <!-- Hover Menu -->
+                    <div class="hover-menu">
+                        <button class="menu-item">Play by Play</button>
+                        <button class="menu-item">Match Details</button>
+                        <button class="menu-item favorite-btn" onclick="toggleFavorite(this)">
+                <span class="star">★</span> Add to Favorites
+              </button>
+                    </div>
                 </div>
+
+                <!-- Scorecard Slide 3 -->
+                <div class="swiper-slide scorecard-slide">
+                    <div class="match-info">
+                        <span class="stage">Round Robin</span>
+                        <br>
+                        <span class="round">Group A - Match #3</span>
+                        <br>
+                        <span class="date">09 Nov • 4:00PM</span>
+                    </div>
+                    <div class="teams">
+                        <div class="team">
+                            <img src="Assets/Image/Logo/nursing.png" alt="FCAP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">1-0</span>
+                        </div>
+                        <div class="score">
+                            <span>- : -</span>
+                        </div>
+                        <div class="team">
+                            <img src="Assets/Image/Logo/shtm.png" alt="FNOP Logo">
+                            <span>CON</span>
+                            <span class="team-record">0-0</span>
+                        </div>
+                    </div>
+                    <!-- Hover Menu -->
+                    <div class="hover-menu">
+                        <button class="menu-item">Match Details</button>
+                        <button class="menu-item favorite-btn" onclick="toggleFavorite(this)">
+                <span class="star">★</span> Add to Favorites
+              </button>
+                    </div>
+                </div>
+
+                <!-- Scorecard Slide 3 -->
+                <div class="swiper-slide scorecard-slide">
+                    <div class="match-info">
+                        <span class="stage">Round Robin</span>
+                        <br>
+                        <span class="round">Group A - Match #3</span>
+                        <br>
+                        <span class="date">09 Nov • 4:00PM</span>
+                    </div>
+                    <div class="teams">
+                        <div class="team">
+                            <img src="Assets/Image/Logo/nursing.png" alt="FCAP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">1-0</span>
+                        </div>
+                        <div class="score">
+                            <span>- : -</span>
+                        </div>
+                        <div class="team">
+                            <img src="Assets/Image/Logo/shtm.png" alt="FNOP Logo">
+                            <span>CON</span>
+                            <span class="team-record">0-0</span>
+                        </div>
+                    </div>
+                    <!-- Hover Menu -->
+                    <div class="hover-menu">
+                        <button class="menu-item">Match Details</button>
+                        <button class="menu-item favorite-btn" onclick="toggleFavorite(this)">
+                <span class="star">★</span> Add to Favorites
+              </button>
+                    </div>
+                </div>
+
+                <!-- Scorecard Slide 3 -->
+                <div class="swiper-slide scorecard-slide">
+                    <div class="match-info">
+                        <span class="stage">Round Robin</span>
+                        <br>
+                        <span class="round">Group A - Match #3</span>
+                        <br>
+                        <span class="date">09 Nov • 4:00PM</span>
+                    </div>
+                    <div class="teams">
+                        <div class="team">
+                            <img src="Assets/Image/Logo/nursing.png" alt="FCAP Logo">
+                            <span>CITE</span>
+                            <span class="team-record">1-0</span>
+                        </div>
+                        <div class="score">
+                            <span>- : -</span>
+                        </div>
+                        <div class="team">
+                            <img src="Assets/Image/Logo/shtm.png" alt="FNOP Logo">
+                            <span>CON</span>
+                            <span class="team-record">0-0</span>
+                        </div>
+                    </div>
+                    <!-- Hover Menu -->
+                    <div class="hover-menu">
+                        <button class="menu-item">Match Details</button>
+                        <button class="menu-item favorite-btn" onclick="toggleFavorite(this)">
+                <span class="star">★</span> Add to Favorites
+              </button>
+                    </div>
+                </div>
+
             </div>
-
-        </div>
-
-        <!-- Hover details section -->
-        <div class="match-details">
-            <p>Location: </p>
-            <p>Date: 10/30/24</p>
-            <p>Time: 08:00 AM</p>
-            <!-- Favorite button -->
-            <button class="favorite-btn">Add to Favorites</button>
-        </div>
-        </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
     </section>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="content">
         <h1>Welcome to Circuit Masters</h1>
         <p>
             Your ultimate platform for organizing tournaments and tracking scores.
         </p>
         <a href="hubs.html" class="button">Explore Hubs</a>
-    </section>
-
-    <!-- Scoreboard Display Section -->
-    <section class="scoreboard">
-        <div class="scoreboard-header">
-            <div class="team">
-                <img id="view-team1-logo" src="team1-logo.png" alt="Team 1 Logo" />
-                <span id="view-team1-name">University of the East</span>
-            </div>
-            <div class="score">
-                <span id="view-team1-score" class="team-score">80</span>
-                <span class="separator">:</span>
-                <span id="view-team2-score" class="team-score">78</span>
-            </div>
-            <div class="team">
-                <img id="view-team2-logo" src="team2-logo.png" alt="Team 2 Logo" />
-                <span id="view-team2-name">University of Santo Tomas</span>
-            </div>
-        </div>
-        <div class="scoreboard-details" id="view-scoreboard-details">
-            <span id="view-period">Period 4</span>
-            <span id="view-time">00:00</span>
-            <span id="view-competition">Competition: UAAP Season 87 - Junior's</span
-        >
-        <span id="view-venue">Venue: MOA</span>
-            <span id="view-game-details">Game Details: 10/30/24 08:00 AM</span>
-        </div>
     </section>
 
     <!-- About Section -->
@@ -166,6 +239,8 @@
 
     <!-- JavaScript -->
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/138fa60134.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

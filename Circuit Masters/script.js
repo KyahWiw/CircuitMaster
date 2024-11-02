@@ -1,51 +1,3 @@
-// Sample data structure to hold schedules and scores
-const schedules = [];
-const scores = [];
-
-// Function to load schedules and scores from localStorage
-function loadData() {
-  const savedSchedules = localStorage.getItem("schedules");
-  const savedScores = localStorage.getItem("scores");
-
-  if (savedSchedules) {
-    schedules.push(...JSON.parse(savedSchedules));
-  }
-
-  if (savedScores) {
-    scores.push(...JSON.parse(savedScores));
-  }
-
-  updateScheduleList();
-  updateScoreList();
-}
-
-// Function to update the schedule list in the UI
-function updateScheduleList() {
-  const scheduleList = document.getElementById("schedule-list");
-  scheduleList.innerHTML = ""; // Clear existing list
-
-  schedules.forEach((match) => {
-    const listItem = document.createElement("li");
-    listItem.innerHTML = `${match.teamA} vs ${match.teamB} - Date: ${match.date}`;
-    scheduleList.appendChild(listItem);
-  });
-}
-
-// Function to update the score list in the UI
-function updateScoreList() {
-  const scoreList = document.getElementById("score-list");
-  scoreList.innerHTML = ""; // Clear existing scores
-
-  scores.forEach((match) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${match.teamA} ${match.scoreA} - ${match.teamB} ${match.scoreB}`;
-    scoreList.appendChild(listItem);
-  });
-}
-
-// Call loadData on page load
-window.onload = loadData;
-
 // JavaScript for scorecard interactivity
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,4 +30,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 500);
     }, 3000);
   }
+});
+
+function toggleFavorite(button) {
+  // Check if the button is currently active (favorited)
+  const isActive = button.classList.contains("active");
+
+  // Toggle the active class
+  button.classList.toggle("active", !isActive);
+
+  // Update the inner HTML of the button based on the favorite state
+  if (!isActive) {
+    button.innerHTML = '<span class="star">★</span> Remove from Favorites';
+  } else {
+    button.innerHTML = '<span class="star">★</span> Add to Favorites';
+  }
+}
+
+// Swiper JS initialization
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: 3, // Show 3 slides at a time
+    spaceBetween: 20, // Space between slides
+    loop: true, // Enable loop mode to avoid disappearing buttons
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2, // Show 2 slides on tablets
+      },
+      480: {
+        slidesPerView: 1, // Show 1 slide on mobile
+      },
+    },
+  });
 });
