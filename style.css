@@ -5,345 +5,472 @@
 /* Reset */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /* Variables */
 
 :root {
-    --bg: #f9fafb;
-    --text-dark: #111827;
-    --primary-color: #1e3a8a;
-    --secondary-color: #f59e0b;
-    --highlight-color: #fbbf24;
-    --dark-gray: #444;
-    --scrollbar-bg: #e5e7eb;
-    --card-bg: #ffffff;
-    --shadow: rgba(0, 0, 0, 0.1);
-    --badge-text: #ffffff;
+  --bg: #f9fafb;
+  --text-dark: #111827;
+  --primary-color: #1e3a8a;
+  --secondary-color: #f59e0b;
+  --highlight-color: #fbbf24;
+  --dark-gray: #444;
+  --scrollbar-bg: #e5e7eb;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --badge-text: #ffffff;
 }
-
 
 /* Body */
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg);
-    line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg);
+  line-height: 1.6;
 }
-
 
 /* Header and Navigation */
 
 header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--secondary-color);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #3b82f6;
-    color: #fff;
+  background-color: #3b82f6;
+  color: #fff;
 }
 
 #search {
-    padding: 5px;
-    font-size: 16px;
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
 }
-
 
 /* Hero Section */
 
-.hero {
-    background-image: url("https://via.placeholder.com/1200x400");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
+#hero {
+  background-color: #f2f2f2;
+  /* Background color */
+  text-align: center;
+  padding: 100px 0;
+  /* Adjust padding as needed */
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(30, 58, 138, 0.7);
+#hero h1 {
+  font-size: 48px;
+  /* Font size */
+  font-weight: bold;
+  color: #333;
+  /* Text color */
+  margin-bottom: 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-    color: var(--highlight-color);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
+#hero p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .button {
-    text-decoration: none;
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    position: relative;
-    z-index: 1;
-    transition: background-color 0.3s;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: var(--highlight-color);
+  background-color: #0062cc;
 }
-
 
 /* Content Sections */
 
 .content {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: var(--card-bg);
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow);
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--card-bg);
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
 .content h2 {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
 .content p {
-    font-size: 1rem;
-    color: var(--text-dark);
+  font-size: 1rem;
+  color: var(--text-dark);
 }
 
+/* About */
 
-/* Scoreboard Styles */
+/* About Section Styling */
 
-.scoreboard-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+#about {
+  background-color: #f0f4f8;
+  /* Light grayish-blue background */
+  color: #333;
+  /* Dark gray text */
+  padding: 50px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for depth */
+  max-width: 800px;
+  /* Width limit to keep it centered and readable */
+  margin: 40px auto;
+  /* Center the section */
+  text-align: center;
+  /* Center text for a clean layout */
 }
 
-.scorecard {
-    position: relative;
-    width: 100%;
-    max-width: 250px;
-    padding: 10px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    text-align: center;
+/* Heading Style */
+
+#about h2 {
+  font-size: 32px;
+  color: #0073e6;
+  /* Bright blue color for the heading */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  /* Make it stand out */
 }
 
-.scorecard:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+/* Paragraph Style */
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  /* Softer gray for readability */
+  font-family: "Roboto", Arial, sans-serif;
+  /* Change to a modern, readable font */
+  max-width: 700px;
+  margin: 0 auto;
+  /* Center align text within the section */
 }
 
-.label {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
+/* Additional Style for a Border Line Under Heading */
+
+#about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #0073e6;
+  margin: 8px auto;
+  /* Center the line under the heading */
+  border-radius: 2px;
 }
 
-.match-summary {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 20px;
+/* Responsive Design for Smaller Screens */
+
+@media (max-width: 768px) {
+  #about {
+    padding: 30px 15px;
+  }
+  #about h2 {
+    font-size: 26px;
+  }
+  #about p {
+    font-size: 16px;
+  }
+}
+
+/* Scoreboard Styling */
+
+.scoreboard {
+  background-image: url(Assets/Image/background-here.jpg);
+}
+
+#scorecard,
+.about,
+.schedule {
+  padding: 20px;
+  background-image: url(Assets/Image/background-here.jpg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scorecard h2,
+.about h2,
+.schedule h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-style: bold;
+  margin-right: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.sports {
+  font-size: 20px;
+  font-style: bold;
+}
+
+.sports-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Swiper Slide */
+
+.swiper-container {
+  width: 250px;
+  padding: 20px 0;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scorecard-slide {
+  background: #fff;
+  color: #be7e7e;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 15px;
+}
+
+.match-info {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.stage {
+  font-weight: bold;
+  color: #ff3333;
+}
+
+.round {
+  font-size: 10px;
+  color: #777373;
+}
+
+.teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.team-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+.team img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
 }
 
-.team-score {
-    font-size: 20px;
-    font-weight: bold;
+.team-record {
+  font-size: 10px;
 }
 
-.vs-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px 0;
+.score {
+  font-size: 24px;
 }
 
-.vs-text {
-    font-size: 1.2rem;
-    font-weight: bold;
+.vl {
+  border-left: 6px solid rgb(0, 0, 0);
+  height: 50px;
+  position: absolute;
+  left: 27%;
+  top: 12%;
 }
 
-.final-label {
-    font-size: 0.8em;
-    color: gray;
+.winner {
+  border: 4px solid;
+  /* A 2px dashed red line */
+  width: 80%;
+  color: #0056b3;
 }
 
-.favorite-btn {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #008cba;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Show hover menu on card hover */
+
+/* Scorecard Slide */
+
+.scorecard-slide {
+  position: relative;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  /* Ensure content stays within the card */
 }
 
-.favorite-btn.active {
-    background-color: #e74c3c;
+.scorecard-slide:hover {
+  transform: scale(1.05);
 }
 
-.match-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
+.scorecard-slide:hover .hover-menu {
+  display: flex;
+  /* Show menu on hover */
+}
+
+/* Style for Star Icon */
+
+.favorite-btn .star {
+  color: gray;
+  font-size: 18px;
+  margin-right: 8px;
+  transition: color 0.3s;
+}
+
+/* Active State for Favorite Button */
+
+.favorite-btn.active .star {
+  color: gold;
+}
+
+/* Keyframes for Slide Up Animation */
+
+@keyframes slideUp {
+  from {
     opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-.scorecard:hover .match-details {
-    opacity: 100;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
+  }
 }
 
-.favorite-btn {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #008cba;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+/* Hover Menu Styling */
+
+.hover-menu {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  flex-direction: column;
+  /* Arrange items vertically */
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 0.3s ease forwards;
+  /* Slide-up animation */
+  z-index: 1;
+  /* Ensure it appears above other content */
 }
 
-.favorite-btn.active {
-    background-color: #e74c3c;
+/* Menu Item Styling */
+
+.menu-item {
+  display: block;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
 }
 
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #444;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s;
+.menu-item:hover {
+  background-color: #0056b3;
 }
 
-
-/* Scrollbar Styles */
-
-::-webkit-scrollbar {
-    width: 1.2rem;
+.swiper-container {
+  width: 100%;
+  padding: 20px 0;
 }
 
-::-webkit-scrollbar-track {
-    background: var(--scrollbar-bg);
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 1.2rem;
+.swipper-pagination {
+  display: flex;
+  justify-content: center;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  justify-content: center;
+  color: #333;
 }
-
-
-/* Responsive Styles */
-
-@media (max-width: 768px) {
-    .scorecard {
-        width: 120px;
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .scoreboard-container {
-        justify-content: flex-start;
-        padding: 0 10px;
-        gap: 10px;
-    }
-}
-
 
 /* Footer */
 
 footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
