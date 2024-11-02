@@ -3,62 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tournament Organizer</title>
+    <title>Organizer Page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script src="organizer.js" defer></script>
   </head>
 
   <body>
+    <!-- Header -->
     <header>
       <div class="logo">Tournament Organizer</div>
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="hubs.html">HUBS</a></li>
-          <li><a href="logout.html">LOG OUT</a></li>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hubs.html">Hubs</a></li>
+          <li><a href="/index.html">Sign out</a></li>
+          <li>
+            <a href="search.html"
+              ><img src="search-icon.png" alt="Search" class="search-icon"
+            /></a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <div class="container">
-      <h1>Manage Your Tournament</h1>
+    <!-- Main Content -->
+    <main>
+      <h2>Organizer Dashboard</h2>
 
-      <div id="tournamentSetup" class="admin-panel">
-        <h2>Create/Edit Tournament</h2>
-        <input
-          type="text"
-          id="tournamentName"
-          placeholder="Tournament Name"
-          required
-        />
-        <input
-          type="text"
-          id="discipline"
-          placeholder="Discipline (Game)"
-          required
-        />
-        <input type="text" id="platform" placeholder="Platform" required />
-        <input
-          type="text"
-          id="type"
-          placeholder="Type (Individual/Team)"
-          required
-        />
-        <input
-          type="number"
-          id="size"
-          placeholder="Team/Player Size"
-          required
-        />
-        <button id="createTournament">Save Tournament</button>
-      </div>
-
-      <div id="tournamentInfo" class="tournament-info">
-        <h2>Current Tournaments</h2>
-        <div id="tournamentDetails"></div>
-      </div>
-    </div>
-
-    <script src="/Admin/Javascript/admin-script.js"></script>
+      <!-- Scoreboard Edit Form -->
+      <form id="scoreboardForm">
+        <h3>Edit Scoreboard</h3>
+        <label>
+          Team 1 Name:
+          <input type="text" id="team1Name" placeholder="Enter team 1 name" />
+        </label>
+        <label>
+          Team 1 Score:
+          <input
+            type="number"
+            id="team1Score"
+            placeholder="Enter team 1 score"
+          />
+        </label>
+        <label>
+          Team 2 Name:
+          <input type="text" id="team2Name" placeholder="Enter team 2 name" />
+        </label>
+        <label>
+          Team 2 Score:
+          <input
+            type="number"
+            id="team2Score"
+            placeholder="Enter team 2 score"
+          />
+        </label>
+        <label>
+          Schedule Time:
+          <input
+            type="text"
+            id="scheduleTime"
+            placeholder="Enter schedule time"
+          />
+        </label>
+        <label>
+          Notes:
+          <input type="text" id="notes" placeholder="Enter notes" />
+        </label>
+        <button type="submit">Save Changes</button>
+      </form>
+    </main>
   </body>
 </html>
