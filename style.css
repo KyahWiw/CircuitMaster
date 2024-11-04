@@ -296,6 +296,11 @@ nav ul li a:hover {
   color: #777373;
 }
 
+.date {
+  font-size: 10px;
+  color: #777373;
+}
+
 .teams {
   display: flex;
   align-items: center;
@@ -321,7 +326,7 @@ nav ul li a:hover {
 }
 
 .score {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .vl {
@@ -366,7 +371,7 @@ nav ul li a:hover {
   display: flex;
 }
 
-.favorite-btn .star {
+.favorite-btn {
   color: gray;
   font-size: 18px;
   margin-right: 8px;
@@ -438,7 +443,7 @@ nav ul li a:hover {
 }
 
 .swiper-container {
-  width: 600px;
+  width: 700px;
   padding: 20px 0;
 }
 
@@ -477,6 +482,82 @@ nav ul li a:hover {
   scrollbar-width: none;
 }
 
+/* Participate */
+
+.courses-section {
+  width: auto;
+  height: 400px;
+  padding-top: 50px;
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(92, 89, 253),
+    rgb(126, 236, 255)
+  );
+}
+
+.courses-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.course-card {
+  background-color: #fff;
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.course-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #777;
+}
+
+.course-card:hover {
+  background-color: #4a90e2;
+  color: #fff;
+  transform: translateY(-10px);
+}
+
+.course-card:hover .course-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.course-info {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+.p-team-logo {
+  width: 50px;
+  height: auto;
+  margin: auto;
+}
+
 /* Standing */
 
 .standing {
@@ -491,6 +572,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   margin: 20px;
+  border-radius: 8px;
 }
 
 .toggle-buttons button {
@@ -498,6 +580,7 @@ nav ul li a:hover {
   margin: 0 10px;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 8px;
 }
 
 .toggle-buttons button.active {
@@ -506,13 +589,23 @@ nav ul li a:hover {
   border: none;
 }
 
-.stage-section {
+.stage-section-active {
   display: flexbox;
   flex-direction: column;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.stage-section-hidden {
+  display: none;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 1920px;
+  height: 1080px;
 }
 
 table {
@@ -595,11 +688,17 @@ h2 {
   gap: 100px;
   width: 800px;
   height: 250px;
-  left: 300px;
+  left: 275px;
 }
 
 .round-column {
   width: 48%;
+}
+
+.stage-label-info {
+  position: relative;
+  font-size: 72px;
+  left: 450px;
 }
 
 .stage-label {
@@ -611,22 +710,29 @@ h2 {
   font-weight: bold;
 }
 
-.stage-label-finals {
-  font-size: 3em;
-  /* Adjust size as needed */
+.stage-label-3rd {
+  position: relative;
+  margin-bottom: 5px;
+  color: rgb(92, 29, 29);
+  font-size: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  /* Optional: make text bold */
-  background: linear-gradient(90deg, #b7e708, #b5ff3e);
-  /* Gradient colors */
-  -webkit-background-clip: text;
-  /* Clip background to text */
-  -webkit-text-fill-color: transparent;
-  /* Make the text transparent */
-  background-clip: text;
-  /* For non-WebKit browsers (not widely supported yet) */
+  left: 80px;
 }
 
-.match-info {
+.stage-label-finals {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #b7e708, #b5ff3e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  left: 80px;
+}
+
+.ko-match-info {
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -635,12 +741,15 @@ h2 {
   margin-bottom: 5px;
 }
 
-.round.semifinals,
-.round.finals {
+.round.semifinals {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 15px;
+}
+
+.round.finals {
+  margin-top: 150px;
 }
 
 .match-card {
@@ -662,38 +771,58 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 6px;
-  padding: 5px 0;
 }
 
-.team {
+.team-playoffs {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+}
+
+.team-logo-sf {
+  position: relative;
+  width: 40px;
+  height: auto;
+  left: 20px;
+  top: 25px;
+}
+
+.team-logo-f-3rd {
+  position: relative;
+  width: 40px;
+  height: auto;
+  right: 40px;
+  top: 25px;
 }
 
 .team-logo {
-  position: sticky;
+  position: relative;
   width: 40px;
   height: auto;
-  right: 30px;
-  top: 10px;
+  right: 40px;
+  top: 25px;
 }
 
 .team-name {
   position: relative;
   left: 100px;
-  bottom: 50px;
+  bottom: 25px;
   font-size: 25px;
   color: #333;
   padding: -10px;
+  text-align: center;
 }
 
-.score {
-  font-size: 16px;
+.ko-score {
+  font-size: 36px;
   font-weight: bold;
   color: #333;
   text-align: right;
   width: 30px;
+}
+
+.ko-match-info .date {
+  color: white;
 }
 
 /* Footer */

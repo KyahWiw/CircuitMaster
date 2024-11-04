@@ -46,7 +46,7 @@
                     <div class="match-info">
                         <span class="stage">Round Robin</span>
                         <br>
-                        <span class="round">Group A - Match #1</span>
+                        <span class="round">Group A <br> Match #1</span>
                         <br>
                         <span class="date">FINAL</span>
                     </div>
@@ -80,7 +80,7 @@
                     <div class="match-info">
                         <span class="stage">Round Robin</span>
                         <br>
-                        <span class="round">Group A - Match #2</span>
+                        <span class="round">Group A <br> Match #2</span>
                         <br>
                         <span class="date">PLAYING</span>
                     </div>
@@ -91,7 +91,7 @@
                             <span class="team-record">0-0</span>
                         </div>
                         <div class="score">
-                            <span>0 : 0</span>
+                            <span> 0 : </span>
                         </div>
                         <div class="team">
                             <img src="Assets/Image/Logo/cite.png" alt="FNOP Logo">
@@ -497,6 +497,57 @@
         <a href="hubs.html" class="button">Explore Hubs</a>
     </section>
 
+    <!-- Participate -->
+    <section class="participate">
+        <div class="courses-section">
+            <h2>Participate</h2>
+            <div class="courses-container">
+                <div class="course-card" data-course="1">
+                    <img src="Assets/Image/Logo/cas.png" class="p-team-logo">
+                    <h3>CAS</h3>
+                    <p>Pionners</p>
+                    <div class="course-info">College of Arts and Science</div>
+                </div>
+                <div class="course-card" data-course="2">
+                    <img src="Assets/Image/Logo/cite.png" class="p-team-logo">
+                    <h3>CITE</h3>
+                    <p>Cyber Sentinels</p>
+                    <div class="course-info">College of Information Technology Education</div>
+                </div>
+                <div class="course-card" data-course="3">
+                    <img src="Assets/Image/Logo/cmls.png" class="p-team-logo">
+                    <h3>CMLS</h3>
+                    <p>Vangers</p>
+                    <div class="course-info">College of Medical Laboratory Science</div>
+                </div>
+                <div class="course-card" data-course="4">
+                    <img src="Assets/Image/Logo/coe.png" class="p-team-logo">
+                    <h3>COE</h3>
+                    <p>Scholars</p>
+                    <div class="course-info">College of Education</div>
+                </div>
+                <div class="course-card" data-course="5">
+                    <img src="Assets/Image/Logo/nursing.png" class="p-team-logo">
+                    <h3>CON</h3>
+                    <p>Healing Hawks</p>
+                    <div class="course-info">College of Nursing</div>
+                </div>
+                <div class="course-card" data-course="6">
+                    <img src="Assets/Image/Logo/sbc.png" class="p-team-logo">
+                    <h3>SBC</h3>
+                    <p>Mavericks</p>
+                    <div class="course-info">School of Business Commerce</div>
+                </div>
+                <div class="course-card" data-course="7">
+                    <img src="Assets/Image/Logo/shtm.png" class="p-team-logo">
+                    <h3>SHTM</h3>
+                    <p>Voyagers</p>
+                    <div class="course-info">School of Hospitality and Tourism Management</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
     <!-- Standing -->
     <section class="standing">
         <div class="toggle-buttons">
@@ -505,7 +556,7 @@
         </div>
 
         <!-- Group Stage Section -->
-        <div id="groupStage" class="stage-section">
+        <div id="groupStage" class="stage-section-active">
             <h2>Group Stage</h2>
 
             <!-- Group A -->
@@ -517,6 +568,7 @@
                         <th>Teams</th>
                         <th>Match W-L</th>
                         <th>Game W-L</th>
+                        <th>GD</th>
                         <th>Points</th>
                     </tr>
                     <!--CON-->
@@ -527,6 +579,7 @@
                             <span class="college-name">College of Nursing</span> </td>
                         <td>1-0</td>
                         <td>3-1</td>
+                        <td>+2</td>
                         <td>3</td>
                     </tr>
                     <!--SHTM-->
@@ -534,9 +587,10 @@
                         <td>2</td>
                         <td>
                             <img src="Assets/Image/Logo/shtm.png" alt="Team A Logo" class="team-icon">
-                            <span class="college-name">College of Hospitality and Tourist Management</span> </td>
+                            <span class="college-name">College of Hospitality and Tourism Management</span> </td>
                         <td>0-0</td>
                         <td>0-0</td>
+                        <td>0</td>
                         <td>0</td>
                     </tr>
                     <!--CITE-->
@@ -547,6 +601,7 @@
                             <span class="college-name">College of Information Technology Education</span> </td>
                         <td>0-1</td>
                         <td>1-3</td>
+                        <td>-2</td>
                         <td>1</td>
                     </tr>
                     <!-- More teams as needed -->
@@ -562,6 +617,7 @@
                         <th>Teams</th>
                         <th>Match W-L</th>
                         <th>Game W-L</th>
+                        <th>GD</th>
                         <th>Points</th>
                     </tr>
                     <!--CAS-->
@@ -572,6 +628,7 @@
                             <span class="college-name">College of Arts and Science</span> </td>
                         <td>0-0</td>
                         <td>0-0</td>
+                        <td>0</td>
                         <td>0</td>
                     </tr>
 
@@ -584,6 +641,7 @@
                         <td>0-0</td>
                         <td>0-0</td>
                         <td>0</td>
+                        <td>0</td>
                     </tr>
 
                     <!--COE-->
@@ -594,6 +652,7 @@
                             <span class="college-name">College of Education</span> </td>
                         <td>0-0</td>
                         <td>0-0</td>
+                        <td>0</td>
                         <td>0</td>
                     </tr>
 
@@ -606,6 +665,7 @@
                         <td>0-0</td>
                         <td>0-0</td>
                         <td>0</td>
+                        <td>0</td>
                     </tr>
 
                     <!-- More teams as needed -->
@@ -614,53 +674,55 @@
         </div>
 
         <!-- Knockout Stage Section -->
-        <div id="knockoutStage" class="stage-section">
-            <h2>Knockout Stage</h2>
+        <div id="knockoutStage" class="stage-section-hidden">
+            <h2 class="stage-label-info">Knockout Stage</h2>
             <div class="bracket-container">
                 <!-- Semifinals Column -->
                 <div class="round-column">
                     <div class="round semifinals">
                         <span class="stage-label">Semi-Finals</span>
-                        <div class="match-info">
+                        <div class="ko-match-info">
                             <span class="date">November 16, 2024</span>
                             <span class="best-of">Best of 3</span>
                         </div>
 
                         <!-- SF#1 -->
+                        <hr>
                         <div class="match-card">
                             <span class="match-number">SF#1</span>
                             <div class="team-row">
-                                <div class="team">
-                                    <img src="teamIND-logo.png" class="team-logo">
-                                    <span class="team-name">A1</span>
+                                <div class="team-playoffs">
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-sf">
+                                    <span class="team-name">CON</span>
                                 </div>
-                                <span class="score">-</span>
+                                <hr>
+                                <span class="ko-score">3</span>
                             </div>
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="teamCUF-logo.png" class="team-logo">
-                                    <span class="team-name">B2</span>
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-sf">
+                                    <span class="team-name">COE</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                         </div>
 
                         <!-- SF#2 -->
                         <div class="match-card">
-                            <span class="match-number">SF#1</span>
+                            <span class="match-number">SF#2</span>
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="teamBAP-logo.png" class="team-logo">
-                                    <span class="team-name">B1</span>
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-sf">
+                                    <span class="team-name">SBC</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="teamSSI-logo.png" class="team-logo">
-                                    <span class="team-name">A2</span>
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-sf">
+                                    <span class="team-name">CITE</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                         </div>
                     </div>
@@ -668,49 +730,49 @@
 
                 <!-- Finals and 3rd Place Column -->
                 <div class="round-column">
-                    <div class="round finals" style="margin-top: 150px;">
+                    <div class="round finals">
                         <span class="stage-label-finals">Grand Finals</span>
-                        <div class="match-info">
+                        <div class="ko-match-info">
                             <span class="date">November 16, 2024</span>
                             <span class="best-of">Best of 5</span>
                         </div>
                         <div class="match-card">
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="teamIND-logo.png" class="team-logo">
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-f-3rd">
                                     <span class="team-name">Winner of SF#1</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="teamBAP-logo.png" class="team-logo">
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-f-3rd">
                                     <span class="team-name">Winner of SF#2</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                         </div>
 
                         <!-- Battle for 3rd Place -->
-                        <span class="stage-label">Battle for 3rd</span>
-                        <div class="match-info">
+                        <span class="stage-label-3rd">Battle for 3rd</span>
+                        <div class="ko-match-info">
                             <span class="date">November 16, 2024</span>
                             <span class="best-of">Best of 3</span>
                         </div>
                         <div class="match-card">
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="Assets/Image/Logo/cite.png" class="team-logo">
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-f-3rd">
                                     <span class="team-name">Loser of SF#1</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                             <div class="team-row">
                                 <div class="team">
-                                    <img src="Assets/Image/Logo/cite.png" class="team-logo">
+                                    <img src="Assets/Image/question-mark.png" class="team-logo-f-3rd">
                                     <span class="team-name">Loser of SF#2</span>
                                 </div>
-                                <span class="score">-</span>
+                                <span class="ko-score">3</span>
                             </div>
                         </div>
                     </div>
