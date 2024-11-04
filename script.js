@@ -50,9 +50,9 @@ function toggleFavorite(button) {
 // Swiper JS initialization
 document.addEventListener("DOMContentLoaded", function () {
   const swiper = new Swiper(".swiper-container", {
-    slidesPerView: 3, // Show 3 slides at a time
-    spaceBetween: 20, // Space between slides
-    loop: true, // Enable loop mode to avoid disappearing buttons
+    slidesPerView: "auto", // Automatically determine the number of slides to show by default
+    spaceBetween: 10, // Space between slides
+    loop: false, // Disable automatic looping
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -65,5 +65,34 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1, // Show 1 slide on mobile
       },
     },
+    resizeObserver: true, // Enable resize observation
+    watchSlidesProgress: true, // Keeps track of slide visibility
+  });
+
+  // Add custom navigation behavior for the next button
+  const nextButton = document.querySelector(".swiper-button-next");
+  nextButton.addEventListener("click", function () {
+    if (swiper.isEnd) {
+      swiper.slideTo(0); // Go back to the first slide if currently on the last slide
+    } else {
+      swiper.slideNext(); // Otherwise, go to the next slide
+    }
   });
 });
+
+// Standing
+function showGroupStage() {
+  document.getElementById("groupStage").style.display = "block";
+  document.getElementById("knockoutStage").style.display = "none";
+
+  document.getElementById("groupStageBtn").classList.add("active");
+  document.getElementById("knockoutStageBtn").classList.remove("active");
+}
+
+function showKnockoutStage() {
+  document.getElementById("groupStage").style.display = "none";
+  document.getElementById("knockoutStage").style.display = "block";
+
+  document.getElementById("groupStageBtn").classList.remove("active");
+  document.getElementById("knockoutStageBtn").classList.add("active");
+}
