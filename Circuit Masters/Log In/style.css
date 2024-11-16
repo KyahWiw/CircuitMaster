@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Login Container */
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h1 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  /* Deep Navy Blue */
+  margin-bottom: 20px;
+}
+
+/* Form Labels and Inputs */
+
+form label {
+  font-size: 0.9rem;
+  color: #111827;
+  /* Dark Charcoal */
+  display: block;
+  margin-top: 15px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #1e3a8a;
+  outline: none;
+}
+
+/* Login Button */
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1e3a8a;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  /* Soft Blue */
+}
+
+/* Error Message */
+
+.error-message {
+  color: #ff0000;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
