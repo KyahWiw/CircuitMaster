@@ -39,8 +39,12 @@
       <form id="scoreboardForm">
         <h3>Edit Scoreboard</h3>
         <label>
+          Organizer Name:
+          <input type="text" id="organizerName" placeholder="Enter your name" required />
+        </label>
+        <label>
           Team 1 Name:
-          <input type="text" id="team1Name" placeholder="Enter team 1 name" />
+          <input type="text" id="team1Name" placeholder="Enter team 1 name" required />
         </label>
         <label>
           Team 1 Score:
@@ -48,11 +52,12 @@
             type="number"
             id="team1Score"
             placeholder="Enter team 1 score"
+            required
           />
         </label>
         <label>
           Team 2 Name:
-          <input type="text" id="team2Name" placeholder="Enter team 2 name" />
+          <input type="text" id="team2Name" placeholder="Enter team 2 name" required />
         </label>
         <label>
           Team 2 Score:
@@ -60,6 +65,7 @@
             type="number"
             id="team2Score"
             placeholder="Enter team 2 score"
+            required
           />
         </label>
         <label>
@@ -68,6 +74,7 @@
             type="text"
             id="scheduleTime"
             placeholder="Enter schedule time"
+            required
           />
         </label>
         <label>
