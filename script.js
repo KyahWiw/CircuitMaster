@@ -1,29 +1,29 @@
-// Observer Design Pattern Implementation
-class EventEmitter {
-  constructor() {
-    this.events = {};
-  }
+// Functional Observer Design Pattern Implementation
+function createEventEmitter() {
+  const events = {};
 
-  on(event, listener) {
-    if (!this.events[event]) {
-      this.events[event] = [];
+  function on(event, listener) {
+    if (!events[event]) {
+      events[event] = [];
     }
-    this.events[event].push(listener);
+    events[event].push(listener);
   }
 
-  off(event, listener) {
-    if (!this.events[event]) return;
-    this.events[event] = this.events[event].filter((l) => l !== listener);
+  function off(event, listener) {
+    if (!events[event]) return;
+    events[event] = events[event].filter((l) => l !== listener);
   }
 
-  emit(event, data) {
-    if (!this.events[event]) return;
-    this.events[event].forEach((listener) => listener(data));
+  function emit(event, data) {
+    if (!events[event]) return;
+    events[event].forEach((listener) => listener(data));
   }
+
+  return { on, off, emit };
 }
 
 // Create an instance of the EventEmitter
-const eventEmitter = new EventEmitter();
+const eventEmitter = createEventEmitter();
 
 // Function to toggle favorite state
 function toggleFavorite(button) {
@@ -38,6 +38,45 @@ function toggleFavorite(button) {
   // Notify observers of the favorite change
   eventEmitter.emit("favoriteChanged", { isActive: !isActive, button });
 }
+
+let notifications = []; // Array to store notifications
+
+// Function to toggle the notification dropdown
+function toggleDropdown() {
+  const dropdown = document.getElementById("notificationDropdown");
+  dropdown.classList.toggle("active");
+}
+
+// Function to add a notification
+function addNotification(message) {
+  const notificationBadge = document.getElementById("notificationBadge");
+  const notificationList = document.getElementById("notificationList");
+
+  // Add new notification to the array
+  notifications.unshift(message);
+
+  // Update the badge count
+  notificationBadge.textContent = notifications.length;
+
+  // Update the notification list
+  notificationList.innerHTML = "";
+  notifications.forEach((note) => {
+    const li = document.createElement("li");
+    li.textContent = note;
+    notificationList.appendChild(li);
+  });
+
+  // If no notifications, show default message
+  if (notifications.length === 0) {
+    const noNotification = document.createElement("li");
+    noNotification.textContent = "No new notifications";
+    notificationList.appendChild(noNotification);
+  }
+}
+
+// Simulate adding notifications
+setTimeout(() => addNotification("Match SF#1 has started!"), 3000);
+setTimeout(() => addNotification("Team A1 won their match!"), 6000);
 
 // Swiper JS initialization
 document.addEventListener("DOMContentLoaded", function () {
@@ -72,12 +111,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Functions to manage tournament stages
+// Functions to manage stages
 function showGroupStage() {
   document.getElementById("groupStage").style.display = "block";
   document.getElementById("knockoutStage").style.display = "none";
   document.getElementById("groupStageBtn").classList.add("active");
   document.getElementById("knockoutStageBtn").classList.remove("active");
+  showGroup("A"); // Show Group A by default in Group Stage
   eventEmitter.emit("stageChanged", "group");
 }
 
@@ -89,34 +129,38 @@ function showKnockoutStage() {
   eventEmitter.emit("stageChanged", "knockout");
 }
 
-// Function to show the selected stage
-function showStage(stage) {
-  const groupStage = document.getElementById("groupStage");
-  const knockoutStage = document.getElementById("knockoutStage");
+// Functions to manage groups
+function showGroup(group) {
+  const groupAContent = document.getElementById("groupAContent");
+  const groupBContent = document.getElementById("groupBContent");
+  const groupABtn = document.getElementById("groupABtn");
+  const groupBBtn = document.getElementById("groupBBtn");
 
-  if (stage === "group") {
-    groupStage.classList.add("active");
-    knockoutStage.classList.remove("active");
-  } else if (stage === "knockout") {
-    groupStage.classList.remove("active");
-    knockoutStage.classList.add("active");
+  if (group === "A") {
+    groupAContent.style.display = "block";
+    groupBContent.style.display = "none";
+    groupABtn.classList.add("active");
+    groupBBtn.classList.remove("active");
+  } else if (group === "B") {
+    groupAContent.style.display = "none";
+    groupBContent.style.display = "block";
+    groupABtn.classList.remove("active");
+    groupBBtn.classList.add("active");
   }
 
-  // Notify observers of the stage change
-  eventEmitter.emit("stageChanged", stage);
+  eventEmitter.emit("groupChanged", group);
 }
 
-// Initialize by showing the group stage and setting up listeners
+// Initialize on page load
 document.addEventListener("DOMContentLoaded", function () {
-  showStage("group");
+  showGroupStage(); // Show Group Stage by default
 
-  // Observer for favorite change
-  eventEmitter.on("favoriteChanged", (data) => {
-    console.log(`Favorite changed: ${data.isActive ? "Added" : "Removed"}`);
-  });
-
-  // Observer for stage change
+  // Observers
   eventEmitter.on("stageChanged", (stage) => {
     console.log(`Stage changed to: ${stage}`);
+  });
+
+  eventEmitter.on("groupChanged", (group) => {
+    console.log(`Group changed to: ${group}`);
   });
 });
