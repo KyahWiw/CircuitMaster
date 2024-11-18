@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Details</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../../Assets/Image/white-logo.png"
+          class="website-logo"
+          href="/index.html"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../Circuit Masters/About Us/about-index.html ">About</a>
+          </li>
+          <li><a href="#hubs ">Hubs</a></li>
+          <li class="nav-notification" onclick="toggleDropdown() ">
+            <span class="notification-bell">🔔</span>
+            <span class="badge" id="notificationBadge ">0</span>
+            <div class="notification-dropdown" id="notificationDropdown ">
+              <ul id="notificationList ">
+                <li>No new notifications</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="match">
+      <div class="match-header">
+        <div class="team1">
+          <img
+            src="../../Assets/Image/Logo/cite.png"
+            alt="CON Logo "
+            class="team-logo"
+          />
+          <span class="team-name">CITE Cyber Sentinels</span>
+        </div>
+        <div class="score">
+          <span class="date-time">December 11, 2024 - 10:30AM</span>
+          <span class="round">Round Robin - Group A</span>
+          <span class="team-score">L</span>
+          <span class="vs">-</span>
+          <span class="team-score"><strong>W</strong></span>
+          <span class="status">FINAL</span>
+        </div>
+        <div class="team2">
+          <img
+            src="../../Assets/Image/Logo/nursing.png"
+            alt="CON Logo "
+            class="team-logo"
+          />
+          <span class="team-name">CON Healing Hawks</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="match-details">
+        <div class="details-header"></div>
+      </div>
+      <h1>LINE UP</h1>
+      <div class="team1-section">
+        <h2 class="team-name">CITE Cyber Sentinels</h2>
+        <div class="team-row">
+          <!-- Players with Selected Heroes -->
+          <div class="player-hero">
+            <img src="player1.jpg" alt="Huisu" class="player-photo" />
+            <span class="player-name">Huisu</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Hylos.png"
+              alt="Hero 1"
+              class="hero-image"
+            />
+            <span class="hero-name">Hylos</span>
+          </div>
+          <div class="player-hero">
+            <img src="player2.jpg" alt="zzzed" class="player-photo" />
+            <span class="player-name">zzzed</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Harley.png"
+              alt="Hero 2"
+              class="hero-image"
+            />
+            <span class="hero-name">Harley</span>
+          </div>
+          <div class="player-hero">
+            <img src="player3.jpg" alt="Yione" class="player-photo" />
+            <span class="player-name">Yione</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Luo Yi.png"
+              alt="Hero 3"
+              class="hero-image"
+            />
+            <span class="hero-name">Luo Yi</span>
+          </div>
+          <div class="player-hero">
+            <img src="player3.jpg" alt="Yione" class="player-photo" />
+            <span class="player-name">Yione</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Lesley.png"
+              alt="Hero 3"
+              class="hero-image"
+            />
+            <span class="hero-name">Lesley</span>
+          </div>
+          <div class="player-hero">
+            <img src="player3.jpg" alt="Yione" class="player-photo" />
+            <span class="player-name">Yione</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Estes.png"
+              alt="Hero 3"
+              class="hero-image"
+            />
+            <span class="hero-name">Estes</span>
+          </div>
+        </div>
+        <!-- Banned Heroes -->
+        <div class="bans-row">
+          <h3>Banned Heroes:</h3>
+
+          <img
+            src="../../Assets/Image/ALL HEROES/Alpha.png"
+            alt="Ban 1"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Gloo.png"
+            alt="Ban 2"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Julian.png"
+            alt="Ban 3"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Joy.png"
+            alt="Ban 4"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Masha.png"
+            alt="Ban 5"
+            class="hero-image banned"
+          />
+        </div>
+      </div>
+
+      <!-- Team 2 Section -->
+      <div class="team2-section">
+        <h2 class="team-name">CON Healing Hawks</h2>
+        <div class="team-row">
+          <!-- Players with Selected Heroes -->
+          <div class="player-hero">
+            <img src="player4.jpg" alt="Opper" class="player-photo" />
+            <span class="player-name">Opper</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Arlott.png"
+              alt="Hero 4"
+              class="hero-image"
+            />
+            <span class="hero-name">Arlott</span>
+          </div>
+
+          <div class="player-hero">
+            <img src="player5.jpg" alt="Lexoyboiz" class="player-photo" />
+            <span class="player-name">Lexoyboiz</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Julian.png"
+              alt="Hero 5"
+              class="hero-image"
+            />
+            <span class="hero-name">Julian</span>
+          </div>
+
+          <div class="player-hero">
+            <img src="player6.jpg" alt="Sosoul" class="player-photo" />
+            <span class="player-name">Sosoul</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Yve.png"
+              alt="Hero 6"
+              class="hero-image"
+            />
+            <span class="hero-name">Yve</span>
+          </div>
+          <div class="player-hero">
+            <img src="player5.jpg" alt="Lexoyboiz" class="player-photo" />
+            <span class="player-name">Lexoyboiz</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Bruno.png"
+              alt="Hero 5"
+              class="hero-image"
+            />
+            <span class="hero-name">Bruno</span>
+          </div>
+          <div class="player-hero">
+            <img src="player5.jpg" alt="Lexoyboiz" class="player-photo" />
+            <span class="player-name">Lexoyboiz</span>
+            <img
+              src="../../Assets/Image/ALL HEROES/Minotaur.png"
+              alt="Hero 5"
+              class="hero-image"
+            />
+            <span class="hero-name">Minotaur</span>
+          </div>
+        </div>
+        <!-- Banned Heroes -->
+        <div class="bans-row">
+          <h3>Banned Heroes:</h3>
+          <img
+            src="../../Assets/Image/ALL HEROES/Aulus.png"
+            alt="Ban 4"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Atlas.png"
+            alt="Ban 5"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Akai.png"
+            alt="Ban 6"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Natan.png"
+            alt="Ban 4"
+            class="hero-image banned"
+          />
+          <img
+            src="../../Assets/Image/ALL HEROES/Wanwan.png"
+            alt="Ban 4"
+            class="hero-image banned"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js "></script>
+  </body>
+</html>

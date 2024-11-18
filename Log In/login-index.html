@@ -3,35 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Circuit Masters</title>
+    <title>Login and Sign Up</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <div class="login-container">
-      <h1>Login to Organizer Portal</h1>
-      <form id="loginForm">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Enter your username"
-          required
-        />
+    <div class="form-container">
+      <!-- Login Form -->
+      <div id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Login</button>
+          <p id="loginMessage" class="error-message"></p>
+        </form>
+        <p class="toggle-text">
+          Don't have an account? <a href="#" id="showSignUp">Sign Up</a>
+        </p>
+      </div>
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Enter your password"
-          required
-        />
-
-        <button type="submit">Login</button>
-        <p id="loginMessage" class="error-message"></p>
-      </form>
+      <!-- Sign Up Form -->
+      <div id="signUpSection" style="display: none">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+          <div class="form-group">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">Password:</label>
+            <input
+              type="password"
+              id="newPassword"
+              name="newPassword"
+              required
+            />
+          </div>
+          <button type="submit">Sign Up</button>
+          <p id="signUpMessage" class="success-message"></p>
+        </form>
+        <p class="toggle-text">
+          Already have an account? <a href="#" id="showLogin">Login</a>
+        </p>
+      </div>
     </div>
-
-    <script src="/Log In/Javascript/login-script.js"></script>
+    <script src="login-script.js"></script>
   </body>
 </html>
