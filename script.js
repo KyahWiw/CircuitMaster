@@ -18,7 +18,6 @@ function createEventEmitter() {
     if (!events[event]) return;
     events[event].forEach((listener) => listener(data));
   }
-
   return { on, off, emit };
 }
 
