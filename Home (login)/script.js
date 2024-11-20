@@ -75,8 +75,18 @@ function addNotification(message) {
 }
 
 // Simulate adding notifications
-setTimeout(() => addNotification("Match SF#1 has started!"), 3000);
-setTimeout(() => addNotification("Team A1 won their match!"), 6000);
+setTimeout(
+  () =>
+    addNotification(
+      "• CITE Cyber Sentinels (0-1) was defeat vs. CON Healing Hawks (1-0)"
+    ),
+  0
+);
+setTimeout(
+  () =>
+    addNotification("• CITE Cyber Sentinels vs SHTM Voyager has ben started "),
+  10000
+);
 
 // Swiper JS initialization
 document.addEventListener("DOMContentLoaded", function () {
